@@ -1,0 +1,10 @@
+<% if(typeof errors != 'undefined'){ %> <% errors.forEach(function(error) { %>
+   
+  
+  <small id="error" class="form-text text-muted "><div class="alert alert-danger" role="alert">
+        <%= error %> 
+      </div> </small>
+
+
+    <% }); %> 
+    <% } %>

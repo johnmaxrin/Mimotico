@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHwAAABpCAYAAAD4BUeWAAAABHNCSVQICAgIfAhkiAAABSxJREFUeJztndt1pDgQhv/ZBJYMVhvBkMEQgjcDbQaEQAgdgkLoyYDJoCeCZTLAEbAPMuM2fUEIqSTk/ztHL7aR6kKh0tUAIYQQQgghhBBCCInCl4h11wBeADQAKgBf337+CuACYADQAzgDGCPKkRMV3m2iYG3059vvfsLaoYe1yUVcOk80rDMnxzICMLDGKJUKVscR7nYZYG2ZLQr27XRV6J7jX4RlluAF2xy9LD2sbbOixj6lrouWFT0qGmFsMsLaOAtCOrskp2uEtUkWTlcI7+xZOSWmRXgUCrVLj/BKzcWIaREeg3h26cW0WKBXBNtbBilFIjAgrm20lCLX9BuF9ClHJbZdejFN3lA7BXYph5l4uMMF8e2jfAT7w08fNJ7PbaETaCMWnUAbjc9Dvg5Xns+58i/s9OJROcPqEBPl85Cvw2PxCuAfHDtDnzGwurwmluMDOTn8O+xbe+TIXnKG1el7Yjl+k4PD56ie55xLY14jyC7at6ARLhNXopKnRSFcBq8lBa8DCGwkBc4Mg0TDsj0MO4RtpYXNkBb+9hvkxbVjzew/RZmj4WfDTl5Uv9k2RvYtPpGuUggKbItyk0TCY2CQeXTPVHDry488Ly6FS/Y+IIO9f2s7XpIv2h8EhXU7Jt/xMvPM6SVuTIzFCw7g7BmFj33RCGbkPmh8DB6DA3whs3sbD0gUG8Y8ebKXGrcJygX5zbdXuHXOCCaqTigAJzzP/A3y+MQpPB9ODbC6qBTCHYEO7lt7U+cHGttk7VIImSsV/DdEphgBPMqk10qPDMbQqdl7amWErBGrAPJ+2oR29ZBdVVVT0zRT0zTPjNgJynx6JMcsZ1VVLk7/dHMTGivRcDqdpmvGcZzatk0Z5Xeju23baRzHD7KeTieXaNcCMmdBh43OvuaB07WA3HrZbtu2D+V0dHonIHdSVpcClVIPjThH+p3njIDsZtnuMrKXKKVcnF7skrFTdts0zVMjTtM01XW9fG4QkH+4brOu61U5V3KP6yLWp0vtWp2vvIjFXxHrlmjDoLAhWwe3N933kz4J6HDTZqBPepH9+QB3xX2StiQOD5C0SXdLInhtad4wLEvmcGDXsOxeKWJSRsNPedeJl6QOn8uGiZdnRQvoEZ0O/gZwLRJLpjHubFmWLrYSOZwtC4HE2nMR69ulOLwvpI3olOJwRrgjEg6XMFRfSBtFvFQKcRMdSSPFvqxHxVZAIsIHAL8i1m8i1i3Z1i8ITL5I9eEmYt2SV4TEbMtErPs3UtuUFYD/ItT7A+vXVynYJch5FmveVjVc/U0Pa/Drnz2iB/DNUb4t/O3Y/mF4uD1oR9ErbW7dM9c56KEj6HFyaPdw7N0AuCyDQ5udR73Kod4hoB6iGzElx+Gh95KHrOsaJdy2Rn6naYLSYX9UuCZPPnvIXaPtHECPzrGtw2Pgb6QLtn0Ct4ydzYZ6q41172mrCDS29+lbnQ3YxG2IVLeP01Mfk0qKgnu0n+Gf3FSwQ7MzPjp/gB1mtTvrdv28G/BwIYD3sXKP22gwCHtd9zxaCD0l2+D+/ybrYXVTgdsjG+hRyEIFcWOOQp1YDiLA8vRLsSc/yPMTqwNu84cTCjsgkPMdL1vpYKP1gve7YOZ+uoZ19te7Tz7nJ2xCVvRs2BGpEGeB5lNOkhyJBuH/p1onJz7xRWH9RiiXUlQ/XlIf/owaNvJr2Bfh24O/e8V7DnCBnUFj300IIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYSQ4/A/B9OKVqvZkzUAAAAASUVORK5CYII="> 
+    
+  <title><%= resl.invitee %></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/f09fc4a330.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans|Raleway|Roboto:300&display=swap');
+ body{
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+ }
+
+</style>
+<%- include ../partials/nav.ejs %>
+<div class="jumbotron jumbotron-fluid" style=" font-family: 'Raleway', sans-serif; background: -moz-linear-gradient(-45deg, #db315b 0%, #ffffff 100%); color: white !important">
+        <div class="container">
+          <h1 class="display-4">Update</h1>
+          <hr class="my-4" style="background-color: white !important">
+          <p class="lead">Welcome to the world's most secure identity management platform</p>
+        </div>
+      </div>
+   
+<div class="container">
+        
+<div class="row justify-content-center">
+        <div class="col-5 align-self-center">
+                <div class="shadow-sm p-3 mb-5 bg-white rounded">
+<form action="/people/update/<%= resl.id %>" method="POST">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Name</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter new name" name="invitee" required="true">  
+    <small id="emailHelp" class="form-text text-muted">Current  <span class="badge badge-primary" style="background-color: #db315b;"><strong><%= resl.invitee %></strong></span></small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Email</label>
+    <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Enter new email" name="email" required="true">
+    <small id="emailHelp" class="form-text text-muted">Current  <span class="badge badge-primary"style="background-color: #db315b;"><strong><%= resl.email %></strong></span></small>
+  </div>
+   
+  
+   
+  <button type="submit" class="btn btn-primary"style="background-color: #db315b; border-color:#db315b">Update</button>
+
+</form>
+</div>
+</div>
+</div>
+</div>
+</html>

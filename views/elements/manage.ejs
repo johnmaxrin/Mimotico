@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHwAAABpCAYAAAD4BUeWAAAABHNCSVQICAgIfAhkiAAABSxJREFUeJztndt1pDgQhv/ZBJYMVhvBkMEQgjcDbQaEQAgdgkLoyYDJoCeCZTLAEbAPMuM2fUEIqSTk/ztHL7aR6kKh0tUAIYQQQgghhBBCCInCl4h11wBeADQAKgBf337+CuACYADQAzgDGCPKkRMV3m2iYG3059vvfsLaoYe1yUVcOk80rDMnxzICMLDGKJUKVscR7nYZYG2ZLQr27XRV6J7jX4RlluAF2xy9LD2sbbOixj6lrouWFT0qGmFsMsLaOAtCOrskp2uEtUkWTlcI7+xZOSWmRXgUCrVLj/BKzcWIaREeg3h26cW0WKBXBNtbBilFIjAgrm20lCLX9BuF9ClHJbZdejFN3lA7BXYph5l4uMMF8e2jfAT7w08fNJ7PbaETaCMWnUAbjc9Dvg5Xns+58i/s9OJROcPqEBPl85Cvw2PxCuAfHDtDnzGwurwmluMDOTn8O+xbe+TIXnKG1el7Yjl+k4PD56ie55xLY14jyC7at6ARLhNXopKnRSFcBq8lBa8DCGwkBc4Mg0TDsj0MO4RtpYXNkBb+9hvkxbVjzew/RZmj4WfDTl5Uv9k2RvYtPpGuUggKbItyk0TCY2CQeXTPVHDry488Ly6FS/Y+IIO9f2s7XpIv2h8EhXU7Jt/xMvPM6SVuTIzFCw7g7BmFj33RCGbkPmh8DB6DA3whs3sbD0gUG8Y8ebKXGrcJygX5zbdXuHXOCCaqTigAJzzP/A3y+MQpPB9ODbC6qBTCHYEO7lt7U+cHGttk7VIImSsV/DdEphgBPMqk10qPDMbQqdl7amWErBGrAPJ+2oR29ZBdVVVT0zRT0zTPjNgJynx6JMcsZ1VVLk7/dHMTGivRcDqdpmvGcZzatk0Z5Xeju23baRzHD7KeTieXaNcCMmdBh43OvuaB07WA3HrZbtu2D+V0dHonIHdSVpcClVIPjThH+p3njIDsZtnuMrKXKKVcnF7skrFTdts0zVMjTtM01XW9fG4QkH+4brOu61U5V3KP6yLWp0vtWp2vvIjFXxHrlmjDoLAhWwe3N933kz4J6HDTZqBPepH9+QB3xX2StiQOD5C0SXdLInhtad4wLEvmcGDXsOxeKWJSRsNPedeJl6QOn8uGiZdnRQvoEZ0O/gZwLRJLpjHubFmWLrYSOZwtC4HE2nMR69ulOLwvpI3olOJwRrgjEg6XMFRfSBtFvFQKcRMdSSPFvqxHxVZAIsIHAL8i1m8i1i3Z1i8ITL5I9eEmYt2SV4TEbMtErPs3UtuUFYD/ItT7A+vXVynYJch5FmveVjVc/U0Pa/Drnz2iB/DNUb4t/O3Y/mF4uD1oR9ErbW7dM9c56KEj6HFyaPdw7N0AuCyDQ5udR73Kod4hoB6iGzElx+Gh95KHrOsaJdy2Rn6naYLSYX9UuCZPPnvIXaPtHECPzrGtw2Pgb6QLtn0Ct4ydzYZ6q41172mrCDS29+lbnQ3YxG2IVLeP01Mfk0qKgnu0n+Gf3FSwQ7MzPjp/gB1mtTvrdv28G/BwIYD3sXKP22gwCHtd9zxaCD0l2+D+/ybrYXVTgdsjG+hRyEIFcWOOQp1YDiLA8vRLsSc/yPMTqwNu84cTCjsgkPMdL1vpYKP1gve7YOZ+uoZ19te7Tz7nJ2xCVvRs2BGpEGeB5lNOkhyJBuH/p1onJz7xRWH9RiiXUlQ/XlIf/owaNvJr2Bfh24O/e8V7DnCBnUFj300IIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYSQ4/A/B9OKVqvZkzUAAAAASUVORK5CYII="> 
+    <title>Manage</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/f09fc4a330.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+ @import url('https://fonts.googleapis.com/css?family=Nunito+Sans|Raleway|Roboto:300&display=swap');
+ body{
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+ }
+</style>
+</head>
+
+<body style="overflow: hidden">
+        <%- include ../partials/nav.ejs %>  
+
+
+        <%= console.log(resl[0]) %>
+
+
+        <% if(typeof resl!=undefined && resl.length>0){ %>
+        
+        <div class="jumbotron jumbotron-fluid" style=" font-family: 'Raleway', sans-serif; background: -moz-linear-gradient(-45deg, #db315b 0%, #ffffff 100%); color: white !important">
+          <div class="container">
+                  <h1 class="display-4">Manage <%= resl[0].eventname %></h1>
+                  <hr class="my-4" style="background-color: white !important">
+                  <p class="lead">Be as smart as you can, but remember that it is always better to be wise than to be smart.</p>
+                </div>
+              </div>
+
+
+
+
+
+
+              
+
+ 
+                 
+                 
+                  <div class="container-fluid" style="overflow-y: scroll; height:600px;">
+
+                
+                  
+                  <div class="row" style="margin-left:10px; overflow: auto;" >
+ 
+
+                    <% for(var i=0; i<resl.length; i++) { %>
+                        <div class="card" style="width: 15rem; margin:10px;" >
+                          <div class="card-body">
+                            <h5 class="card-title"><%= resl[i].invitee %></h5>
+
+                            <% if(resl[i].status==false){ %>
+                              <h6 class="card-subtitle mb-2 text-muted">Status <span class="badge badge-danger"><h10>OUT</h10></h6>
+                            <% }  else{ %>
+                              <h6 class="card-subtitle mb-2 text-muted">Status <span class="badge badge-success"><h10>IN</h10></h6>
+                            <% } %>
+                            <h6 class="card-subtitle mb-2 text-muted">
+                              
+                                <a href="/people/deletepupil/<%= resl[i].id %>"><span class="badge badge-danger" style="background-color: #db315b;"><h9><i class="fas fa-trash"></i></h9></span></a>
+
+
+                                <a href="/people/updatepage/<%= resl[i].id %>"><span class="badge badge-secondary" style="background-color: #0a2463;"><h9><i class="fas fa-wrench"></i></h9></span></a>
+
+
+                              <a href="/people/getblock/<%= resl[i].id %>"><span class="badge badge-primary" style="background-color:  #3e92cc;"><h9><i class="fas fa-street-view"></i></h9></span></a>
+                            
+                            
+                            </h6>
+
+                          </div>
+                       
+                        </div>
+                  
+
+                        
+
+                            <% } %>
+                          
+                          </div>
+                            
+                        </div>
+
+                            <% } else{ %> 
+
+                              <div class="jumbotron jumbotron-fluid" style=" font-family: 'Raleway', sans-serif; background: -moz-linear-gradient(-45deg, #cc4f76, #901bb8); color: white !important">
+                                <div class="container">
+                                        <h1 class="display-4">You havn't invited anyone yet ¯\_(ツ)_/¯</h1>
+                                        <hr class="my-4" style="background-color: white !important">
+                                        <p class="lead">Welcome to the world's most secure identity management platform</p>
+                                      </div>
+                                    </div>
+              <div class="progress" style="height: 5px; margin-top: -35px;">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="0" aria-valuemin="10" aria-valuemax="100"></div>
+                  </div>
+
+
+
+                  <% } %>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHwAAABpCAYAAAD4BUeWAAAABHNCSVQICAgIfAhkiAAABSxJREFUeJztndt1pDgQhv/ZBJYMVhvBkMEQgjcDbQaEQAgdgkLoyYDJoCeCZTLAEbAPMuM2fUEIqSTk/ztHL7aR6kKh0tUAIYQQQgghhBBCCInCl4h11wBeADQAKgBf337+CuACYADQAzgDGCPKkRMV3m2iYG3059vvfsLaoYe1yUVcOk80rDMnxzICMLDGKJUKVscR7nYZYG2ZLQr27XRV6J7jX4RlluAF2xy9LD2sbbOixj6lrouWFT0qGmFsMsLaOAtCOrskp2uEtUkWTlcI7+xZOSWmRXgUCrVLj/BKzcWIaREeg3h26cW0WKBXBNtbBilFIjAgrm20lCLX9BuF9ClHJbZdejFN3lA7BXYph5l4uMMF8e2jfAT7w08fNJ7PbaETaCMWnUAbjc9Dvg5Xns+58i/s9OJROcPqEBPl85Cvw2PxCuAfHDtDnzGwurwmluMDOTn8O+xbe+TIXnKG1el7Yjl+k4PD56ie55xLY14jyC7at6ARLhNXopKnRSFcBq8lBa8DCGwkBc4Mg0TDsj0MO4RtpYXNkBb+9hvkxbVjzew/RZmj4WfDTl5Uv9k2RvYtPpGuUggKbItyk0TCY2CQeXTPVHDry488Ly6FS/Y+IIO9f2s7XpIv2h8EhXU7Jt/xMvPM6SVuTIzFCw7g7BmFj33RCGbkPmh8DB6DA3whs3sbD0gUG8Y8ebKXGrcJygX5zbdXuHXOCCaqTigAJzzP/A3y+MQpPB9ODbC6qBTCHYEO7lt7U+cHGttk7VIImSsV/DdEphgBPMqk10qPDMbQqdl7amWErBGrAPJ+2oR29ZBdVVVT0zRT0zTPjNgJynx6JMcsZ1VVLk7/dHMTGivRcDqdpmvGcZzatk0Z5Xeju23baRzHD7KeTieXaNcCMmdBh43OvuaB07WA3HrZbtu2D+V0dHonIHdSVpcClVIPjThH+p3njIDsZtnuMrKXKKVcnF7skrFTdts0zVMjTtM01XW9fG4QkH+4brOu61U5V3KP6yLWp0vtWp2vvIjFXxHrlmjDoLAhWwe3N933kz4J6HDTZqBPepH9+QB3xX2StiQOD5C0SXdLInhtad4wLEvmcGDXsOxeKWJSRsNPedeJl6QOn8uGiZdnRQvoEZ0O/gZwLRJLpjHubFmWLrYSOZwtC4HE2nMR69ulOLwvpI3olOJwRrgjEg6XMFRfSBtFvFQKcRMdSSPFvqxHxVZAIsIHAL8i1m8i1i3Z1i8ITL5I9eEmYt2SV4TEbMtErPs3UtuUFYD/ItT7A+vXVynYJch5FmveVjVc/U0Pa/Drnz2iB/DNUb4t/O3Y/mF4uD1oR9ErbW7dM9c56KEj6HFyaPdw7N0AuCyDQ5udR73Kod4hoB6iGzElx+Gh95KHrOsaJdy2Rn6naYLSYX9UuCZPPnvIXaPtHECPzrGtw2Pgb6QLtn0Ct4ydzYZ6q41172mrCDS29+lbnQ3YxG2IVLeP01Mfk0qKgnu0n+Gf3FSwQ7MzPjp/gB1mtTvrdv28G/BwIYD3sXKP22gwCHtd9zxaCD0l2+D+/ybrYXVTgdsjG+hRyEIFcWOOQp1YDiLA8vRLsSc/yPMTqwNu84cTCjsgkPMdL1vpYKP1gve7YOZ+uoZ19te7Tz7nJ2xCVvRs2BGpEGeB5lNOkhyJBuH/p1onJz7xRWH9RiiXUlQ/XlIf/owaNvJr2Bfh24O/e8V7DnCBnUFj300IIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYSQ4/A/B9OKVqvZkzUAAAAASUVORK5CYII="> 
+    
+  <title><%= resl[0].pupilname %></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/f09fc4a330.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans|Raleway|Roboto:300&display=swap');
+ body{
+  font-family: 'Roboto', sans-serif;
+   
+ }
+</style>
+
+
+</head>
+<body>
+
+
+    <%- include ./partials/nav.ejs %>
+
+
+<div class="jumbotron"  style=" font-family: 'Raleway', sans-serif; overflow: hidden; background: -moz-linear-gradient(-45deg, rgb(244, 62, 16) 0%, rgba(137,10,255,1) 100%); color: white !important">
+  <div class="container">
+  	<div class="row justify-content-center">
+    <div class="col-8">
+    <h1 class="display-4"><%= resl[0].pupilname %>  
+      
+      <% console.log(resl[resl.length-1].action) %>
+      <% if(resl[resl.length-1].action=='Out'){ %>
+      
+      <span class="badge badge-danger"> Out</span>
+      <% }  else{ %>
+
+        <span class="badge badge-success"> In</span>
+        <% } %>
+    </h1>
+    <hr class="my-4" style="background-color: white !important">
+    <p class="lead"><span class="badge badge-info"> Id </span> <%= resl[0].id %> <span class="badge badge-success"> Email </span> <%= resl[0].email %></p>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="container-fluid" >
+  <div class="row justify-content-end">
+       
+      <div class="col-9">
+      <div class="card" style="width: 70rem;">
+  <div class="card-body">
+    
+   
+    <p class="card-text">
+    
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col-1">#</th>
+      <th scope="col-5">Hash</th>
+      <th scope="col-5">Prev Hash</th>
+      <th scope="col-4">TimeStamp</th>
+      <th scope="col-1">Action</th>
+      <th scope="col-3">@</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <% for(var i=0; i<resl.length; i++) { %>
+      <th scope="row"><%= i+1 %></th>
+      <td><%= resl[i].hash %></td>
+      <td><%= resl[i].prevhash %></td>
+      <td><%= resl[i].timestamp %></td>
+      <td><%= resl[i].action %></td>
+      <td><%= resl[i].at %></td>
+    </tr>
+ <% } %>
+  
+  </tbody>
+</table>
+    
+    </p>
+   
+   
+   
+   
+</div>
+</div>
+</div>
+</div>
+ 
+
+
+
+
+
+
+
+ 
+
+</body>
+</html>
