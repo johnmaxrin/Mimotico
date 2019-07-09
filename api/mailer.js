@@ -6,14 +6,14 @@ var nodemailer=require('nodemailer');
 
             service: 'gmail',
             auth: {
-              user: 'robertksamuel2022@it.ajce.in',
-              pass: 'robertksamuel123'
+              user: 'ksamuelrobert@gmail.com',
+              pass: '28284211dnsntj'
             }
         });
 
          
         var mailop={
-            from:'Robert from Mimotico',
+            from:'ksamuelrobert@gmail.com',
             to:mail,
             subject:req.eventname,
             text:req.message,
