@@ -1,6 +1,7 @@
 var express=require('express')
 var router=express.Router()
-
+var event=require('../models/eventmodel')
+var mail=require('../api/mailer')
 var people=require('../models/userlist')
 var block=require('../models/block')
 var gblock=require('../api/gblock')
@@ -15,6 +16,26 @@ router.get('',jwtmdl,(req,res)=>{
 })
 
 
+router.get('/invite/:uid',jwtmdl,(req,res)=>{
+
+    people.findById(req.params.uid,(err,resl)=>{
+        
+     //Error Handler!
+     if(err){
+        res.render('./elements/error')
+    }
+    event.findOne({eventid:resl.eventid},(err,resl2)=>{
+        mail.sentmail(resl.email,resl2,resl.invitee)
+        res.redirect('/dashboard/manage/'+resl.eventid)
+
+    })
+
+
+    })
+
+    gblock.updatemailstatustrue(req.params.uid)
+
+});
 
 router.get('/getblock/:uid',jwtmdl,(req,res)=>{
 

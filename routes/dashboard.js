@@ -5,7 +5,6 @@ var random=require('random')
 var jwt=require('jsonwebtoken')
 var event=require('../models/eventmodel')
 var userlist=require('../models/userlist')
-var mail=require('../api/mailer')
 var generatepdf=require('../api/generatepdf')
 var gblock=require('../api/gblock')
 var random=require('random-number')
@@ -97,8 +96,9 @@ router.post('/send/:eid',jwtmdl,(req,res)=>{
             data={name:name,email:email}
              
             token=jwt.sign({data},req.params.eid.toString(),{expiresIn:resl.duration});
-            generatepdf.generatepdf(resl.eventname,token,name,resl.message,fname)
-            mail.sentmail(email,resl,fname)
+            generatepdf.generatepdf(resl.eventname,token,name,resl.message,name)
+
+            
 
             var userli=new userlist({
                 user:req.session.user,
@@ -125,6 +125,7 @@ router.post('/send/:eid',jwtmdl,(req,res)=>{
                 // res.send(data)
             });
 
+             
             i++;
 
         });
@@ -240,6 +241,9 @@ router.post('/eventsuccess',jwtmdl,(req,res)=>{
         }
     
 })
+
+
+
 
 
 

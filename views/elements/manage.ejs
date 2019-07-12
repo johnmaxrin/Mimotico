@@ -13,6 +13,19 @@
   font-family: 'Roboto', sans-serif;
   overflow: hidden;
  }
+
+ .blinking{
+    animation:blinkingText 0.8s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: rgb(255, 255, 255);    }
+    49%{    color: transparent; }
+    50%{    color: rgb(255, 255, 255); }
+    90%{    color:transparent;  }
+    95%{   color: rgb(255, 255, 255);    }
+}
+
+
 </style>
 </head>
 
@@ -25,7 +38,7 @@
 
         <% if(typeof resl!=undefined && resl.length>0){ %>
         
-        <div class="jumbotron jumbotron-fluid" style=" font-family: 'Raleway', sans-serif; background: -moz-linear-gradient(-45deg, #db315b 0%, #ffffff 100%); color: white !important">
+        <div class="jumbotron jumbotron-fluid" style=" font-family: 'Raleway', sans-serif; background: linear-gradient(-45deg, #ffffff 0%, #db315b 100%); color: white !important">
           <div class="container">
                   <h1 class="display-4">Manage <%= resl[0].eventname %></h1>
                   <hr class="my-4" style="background-color: white !important">
@@ -69,7 +82,18 @@
 
 
                               <a href="/people/getblock/<%= resl[i].id %>"><span class="badge badge-primary" style="background-color:  #3e92cc;"><h9><i class="fas fa-street-view"></i></h9></span></a>
-                            
+
+
+
+                              <% if(resl[i].mailstatus==true){ %>
+                                
+                                <a href=""><span class="badge badge-primary" style="background-color:  #61c06e;"><h9 ><i class="fas fa-envelope-open"></i></i></h9></span></a>
+                                
+
+                              <% }  else{ %>
+                                <a href="/people/invite/<%= resl[i].id %>"><span class="badge badge-primary" style="background-color:  #1e1b18;"><h9 class="blinking"><i class="fas fa-envelope"></i></i></h9></span></a>
+                              <% } %>
+
                             
                             </h6>
 
@@ -88,7 +112,7 @@
 
                             <% } else{ %> 
 
-                              <div class="jumbotron jumbotron-fluid" style=" font-family: 'Raleway', sans-serif; background: -moz-linear-gradient(-45deg, #cc4f76, #901bb8); color: white !important">
+                              <div class="jumbotron jumbotron-fluid" style=" font-family: 'Raleway', sans-serif; background: linear-gradient(-45deg, #cc4f76, #901bb8); color: white !important">
                                 <div class="container">
                                         <h1 class="display-4">You havn't invited anyone yet ¯\_(ツ)_/¯</h1>
                                         <hr class="my-4" style="background-color: white !important">

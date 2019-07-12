@@ -3,6 +3,8 @@ var md5=require('md5')
 var moment=require('moment')
 var people=require('../models/userlist')
 var block=require('../models/block')
+var event=require('../models/eventmodel')
+var pdf=require('../api/generatepdf')
 
 
 function getblock(){
@@ -99,9 +101,18 @@ block.findOne({pid:data.pid}, {}, { sort: { '_id' : -1 } }, (err,resl)=>{
 
 
 function doneupdate(data,res){
+    let eventid;
+    let eventid2;
+    let tokenz;
+     
 people.findByIdAndUpdate(data.id,data.body,(err,resl)=>{
     
+    
+   
+    
 
+    tokenz=resl.token;
+    
     block.findOneAndUpdate({pid:data.id},{pupilname:data.body.invitee,email:data.body.email},(err,resll)=>{
         var data2={
             pid:data.id,
@@ -114,10 +125,43 @@ people.findByIdAndUpdate(data.id,data.body,(err,resl)=>{
         createblock(data2);
             res.render('./elements/updatesuccess',{resl})
     })
+
+
+    event.findOne({eventid:resl.eventid},(err,resl3)=>{
+
+        console.log('of Update! 2 '+resl3)
+        if(err) console.log(err)
+    pdf.generatepdf(resl3.eventname,tokenz,data.body.invitee,resl3.message,data.body.invitee);
+    })
+
+
+    })
+    
+
+
+    updatemailstatusfalse(data.id)
+}
+
+
+function updatemailstatustrue(uid){
+people.findByIdAndUpdate(uid,{mailstatus:true},(err,resl)=>{
+if(err) console.log(err)
+console.log('Mail Updated!! '+resl)
+})
+
+}
+
+
+function updatemailstatusfalse(uid){
+    people.findByIdAndUpdate(uid,{mailstatus:false},(err,resl)=>{
+    if(err) console.log(err)
+    console.log(resl)
     })
 }
 
 
+module.exports.updatemailstatustrue=updatemailstatustrue;
+module.exports.updatemailstatusfalse=updatemailstatusfalse;
 module.exports.doneupdate=doneupdate;
 module.exports.createblock=createblock;
 module.exports.getblock=getblock;

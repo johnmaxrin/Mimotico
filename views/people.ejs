@@ -19,6 +19,13 @@
   font-family: 'Roboto', sans-serif;
    
  }
+
+
+
+
+
+
+
 </style>
 
 
@@ -29,19 +36,20 @@
     <%- include ./partials/nav.ejs %>
 
 
-<div class="jumbotron"  style=" font-family: 'Raleway', sans-serif; overflow: hidden; background: -moz-linear-gradient(-45deg, rgb(244, 62, 16) 0%, rgba(137,10,255,1) 100%); color: white !important">
+<div class="jumbotron"  style=" font-family: 'Raleway', sans-serif; overflow: hidden; background: linear-gradient(-45deg, rgb(244, 62, 16) 0%, rgba(137,10,255,1) 100%); color: white !important">
   <div class="container">
   	<div class="row justify-content-center">
     <div class="col-8">
     <h1 class="display-4"><%= resl[0].pupilname %>  
       
-      <% console.log(resl[resl.length-1].action) %>
-      <% if(resl[resl.length-1].action=='Out'){ %>
+      <% console.log('Console Log!!'+resl[resl.length-1].status) %>
+
+      <% if(resl[resl.length-1].action=='In'){ %>
+        <span class="badge badge-success"> In</span>
       
-      <span class="badge badge-danger"> Out</span>
       <% }  else{ %>
 
-        <span class="badge badge-success"> In</span>
+        <span class="badge badge-danger"> Out</span>
         <% } %>
     </h1>
     <hr class="my-4" style="background-color: white !important">
@@ -52,7 +60,7 @@
 </div>
 
 <div class="container-fluid" >
-  <div class="row justify-content-end">
+  <div class="row justify-content-center">
        
       <div class="col-9">
       <div class="card" style="width: 70rem;">

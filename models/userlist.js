@@ -34,6 +34,11 @@ var userlist=mongoose.Schema({
     status:{
         type:Boolean,
         Default:0
+    },
+
+    mailstatus:{
+        type:Boolean,
+        Default:0
     }
 });
 
