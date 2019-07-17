@@ -1,6 +1,7 @@
 const express=require('express')
 const router=express.Router();
 const user=require('../models/userlist')
+const event=require('../models/eventmodel')
 const gblock=require('../api/gblock')
 const moment=require('moment')
 
@@ -14,6 +15,16 @@ user.findOne({token:req.params.token},(err,resl)=>{
     res.send(resl)
 })
 })
+
+router.get('/:eventid',(req,res)=>{
+    event.findOne({eventid:req.params.eventid},(err,resl)=>{
+        if(err){
+            res.send(0)
+        }
+        res.send(resl)
+    })
+})
+
 
 router.post('/update/:token',(req,res)=>{
     user.findOneAndUpdate({token:req.params.token},{status:req.body.status},(err,resl)=>{
