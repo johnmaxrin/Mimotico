@@ -64,6 +64,46 @@ router.post('/updateuser',(req,res)=>{
 
         }
         gblock.createblock(data);
+        res.send(1)
     })
 })
 module.exports = router;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+   if (error instanceof NetworkError) {
+                    qrcoderes.setText("EROOR BUDDY! 124");
+                }
+
+               if (error instanceof NoConnectionError) {
+                    qrcoderes.setText("Connection Error! ");
+                }
+
+               if (error instanceof ServerError) {
+                    qrcoderes.setText("Server Error! ");
+                }
+
+             else if (error instanceof AuthFailureError) {
+                    qrcoderes.setText("Auth Fail ");
+            }
+
+            else if (error instanceof TimeoutError) {
+                    qrcoderes.setText("Time Out !");
+            }
+
+
+            */
