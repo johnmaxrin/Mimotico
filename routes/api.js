@@ -35,20 +35,32 @@ router.get('/getevent/:eventid',(req,res)=>{
 })
 
 
-router.post('/updateuser',(req,res)=>{
-    user.findOneAndUpdate({token:req.body.token},{status:req.body.status},(err,resl)=>{
+router.post('/updateuser/:token',(req,res)=>{
+
+
+var token=req.body.status
+console.log(token.toString())
+
+  
+
+
+    user.findOneAndUpdate({token:req.params.token},{status:req.body.status,venue:req.body.venue},{new: true},(err,resl1)=>{
         if(err){
-            res.send(0)
+            res.send(500)
+
+            console.log(err)
         }
-        res.send(resl);
+
+        console.log("First One "+resl1)
+        res.send(resl1);
     });
 
-    user.findOne({token:req.body.token},(err,resl)=>{
+    user.findOne({token:req.params.token},(err,resl)=>{
 
         if(err){
             res.send(0)
         }
-
+ 
         var cstatus='Out'
         if(resl.status){
             cstatus='In'
@@ -64,7 +76,7 @@ router.post('/updateuser',(req,res)=>{
 
         }
         gblock.createblock(data);
-        res.send(1)
+        
     })
 })
 module.exports = router;
